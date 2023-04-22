@@ -1,0 +1,10 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>og.area.r</groupId>
+    <artifactId>area.r</artifactId>
+    <version>0.0.1-DEV</version>
+    <modules>
+        <module>area-r-application</module>
+    </modules>
+    <packaging>pom</packaging>
+</project>
