@@ -4,7 +4,7 @@
     <artifactId>area.r</artifactId>
     <version>0.0.1-DEV</version>
     <modules>
-        <module>area-r-application</module>
+        <module>area-r-application-user-management</module>
     </modules>
     <packaging>pom</packaging>
 </project>

@@ -3,6 +3,7 @@ package com.example.arearapplication.user.service;
 
 import com.example.arearapplication.user.model.User;
 import com.example.arearapplication.user.model.UserDto;
+import com.example.arearapplication.user.model.UserMapper;
 import com.example.arearapplication.user.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -28,5 +29,13 @@ public class UserService {
     public User create(User user)
     {
         return userRepository.save(user);
+    }
+
+    public UserDto findByUserName(String userName)
+    {
+        return userRepository.findUserByUserName(userName)
+                .map(UserMapper::mapToDto)
+                .orElseThrow(() -> new IllegalArgumentException("User doesnt exist"));
+
     }
 }
