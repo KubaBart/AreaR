@@ -14,7 +14,12 @@ import org.springframework.data.mongodb.core.mapping.MongoId;
 public class Profile {
     @MongoId
     private Long id;
-    private UserDto userDto;
+    private String userName;
     private String firstName;
     private String lastName;
+
+    public Profile(String userName)
+    {
+        this.userName = userName;
+    }
 }
